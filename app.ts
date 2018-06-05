@@ -19,14 +19,27 @@ class People{
 
 class User extends People
 {
-    constructor(nombre:string)
+    private id:number;
+    constructor(nombre:string, id:number)
     {
         super(nombre);
+        this.id=id;
+    }
+    setId(id:number):void
+    {
+        this.id = id;
+    }
+    getId():number
+    {
+        return this.id;
     }
 }
 
-let user = new User("antonio")
+let user = new User("antonio", 1)
 alert(user.getNombre());
 user.setNombre("Luis");
 alert(user.getNombre());
-
+alert(user.getId());
+//let people = new People("Filipino");
+//people.serId(3);
+//ultimo no posible, people no puede modificarse desde fuera.//
