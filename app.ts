@@ -1,14 +1,9 @@
-//let nombre: string="Luis";
-//let apellido: string="Jurado";
-//alert(nombre + " " + apellido);
 
-//readonly caracteristica: string="Muy guapo";
-//alert(nombre + ""+ apellido + "" + caracteristica);
 
-class User{
-     private name:string;
-     private lastName:string;
-    constructor(nombre:string)
+class People{
+     protected name:string;
+     protected lastName:string;
+     protected constructor(nombre:string)
     {
         this.name=nombre;
     }
@@ -22,9 +17,13 @@ class User{
     }
 }
 
-//let user = new User("Antonio")
-//alert(user.getNombre()); 
-//alert(user.name);
+class User extends People
+{
+    constructor(nombre:string)
+    {
+        super(nombre);
+    }
+}
 
 let user = new User("antonio")
 alert(user.getNombre());

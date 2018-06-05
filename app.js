@@ -1,23 +1,32 @@
-//let nombre: string="Luis";
-//let apellido: string="Jurado";
-//alert(nombre + " " + apellido);
-//readonly caracteristica: string="Muy guapo";
-//alert(nombre + ""+ apellido + "" + caracteristica);
-var User = /** @class */ (function () {
-    function User(nombre) {
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var People = /** @class */ (function () {
+    function People(nombre) {
         this.name = nombre;
     }
-    User.prototype.getNombre = function () {
+    People.prototype.getNombre = function () {
         return this.name;
     };
-    User.prototype.setNombre = function (nombre) {
+    People.prototype.setNombre = function (nombre) {
         this.name = nombre;
     };
-    return User;
+    return People;
 }());
-//let user = new User("Antonio")
-//alert(user.getNombre()); 
-//alert(user.name);
+var User = /** @class */ (function (_super) {
+    __extends(User, _super);
+    function User(nombre) {
+        return _super.call(this, nombre) || this;
+    }
+    return User;
+}(People));
 var user = new User("antonio");
 alert(user.getNombre());
 user.setNombre("Luis");
