@@ -6,8 +6,8 @@
 //alert(nombre + ""+ apellido + "" + caracteristica);
 
 class User{
-    name:string;
-    lastName:string;
+     private name:string;
+     private lastName:string;
     constructor(nombre:string)
     {
         this.name=nombre;
@@ -16,7 +16,18 @@ class User{
     getNombre():string{
         return this.name;
     }
+
+    setNombre(nombre:string):void{
+        this.name= nombre;
+    }
 }
 
-let user = new User("Antonio")
-alert(user.getNombre()); 
+//let user = new User("Antonio")
+//alert(user.getNombre()); 
+//alert(user.name);
+
+let user = new User("antonio")
+alert(user.getNombre());
+user.setNombre("Luis");
+alert(user.getNombre());
+

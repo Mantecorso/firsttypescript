@@ -10,7 +10,15 @@ var User = /** @class */ (function () {
     User.prototype.getNombre = function () {
         return this.name;
     };
+    User.prototype.setNombre = function (nombre) {
+        this.name = nombre;
+    };
     return User;
 }());
-var user = new User("Antonio");
+//let user = new User("Antonio")
+//alert(user.getNombre()); 
+//alert(user.name);
+var user = new User("antonio");
+alert(user.getNombre());
+user.setNombre("Luis");
 alert(user.getNombre());
