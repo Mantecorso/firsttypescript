@@ -35,6 +35,12 @@ class User extends People
     }
 }
 
+class Pepe extends People{
+    constructor (nombre:string){
+        super(nombre);
+    }
+}
+
 let user = new User("antonio", 1)
 alert(user.getNombre());
 user.setNombre("Luis");
@@ -43,3 +49,6 @@ alert(user.getId());
 //let people = new People("Filipino");
 //people.serId(3);
 //ultimo no posible, people no puede modificarse desde fuera.//
+let pepe = new Pepe("pepe");
+alert(pepe.getNombre());
+

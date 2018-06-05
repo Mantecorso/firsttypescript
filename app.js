@@ -22,12 +22,33 @@ var People = /** @class */ (function () {
 }());
 var User = /** @class */ (function (_super) {
     __extends(User, _super);
-    function User(nombre) {
-        return _super.call(this, nombre) || this;
+    function User(nombre, id) {
+        var _this = _super.call(this, nombre) || this;
+        _this.id = id;
+        return _this;
     }
+    User.prototype.setId = function (id) {
+        this.id = id;
+    };
+    User.prototype.getId = function () {
+        return this.id;
+    };
     return User;
 }(People));
-var user = new User("antonio");
+var Pepe = /** @class */ (function (_super) {
+    __extends(Pepe, _super);
+    function Pepe(nombre) {
+        return _super.call(this, nombre) || this;
+    }
+    return Pepe;
+}(People));
+var user = new User("antonio", 1);
 alert(user.getNombre());
 user.setNombre("Luis");
 alert(user.getNombre());
+alert(user.getId());
+//let people = new People("Filipino");
+//people.serId(3);
+//ultimo no posible, people no puede modificarse desde fuera.//
+var pepe = new Pepe("pepe");
+alert(pepe.getNombre());
